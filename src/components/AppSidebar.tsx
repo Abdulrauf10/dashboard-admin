@@ -1,5 +1,6 @@
 
 import { BarChart3, Home, PieChart, Settings, TrendingUp, Users, Moon, Sun } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import {
   Sidebar,
   SidebarContent,
@@ -18,38 +19,39 @@ import { useTheme } from "@/components/ThemeProvider";
 const menuItems = [
   {
     title: "Dashboard",
-    url: "#",
+    url: "/",
     icon: Home,
   },
   {
     title: "Analytics",
-    url: "#",
+    url: "/analytics",
     icon: BarChart3,
   },
   {
     title: "Reports",
-    url: "#",
+    url: "/reports",
     icon: PieChart,
   },
   {
     title: "Users",
-    url: "#",
+    url: "/users",
     icon: Users,
   },
   {
     title: "Trends",
-    url: "#",
+    url: "/trends",
     icon: TrendingUp,
   },
   {
     title: "Settings",
-    url: "#",
+    url: "/settings",
     icon: Settings,
   },
 ];
 
 export function AppSidebar() {
   const { theme, setTheme } = useTheme();
+  const location = useLocation();
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -77,12 +79,13 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton 
                     asChild 
+                    isActive={location.pathname === item.url}
                     className="hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 dark:hover:from-blue-950 dark:hover:to-purple-950 transition-all duration-300"
                   >
-                    <a href={item.url} className="flex items-center gap-3">
+                    <Link to={item.url} className="flex items-center gap-3">
                       <item.icon className="h-4 w-4" />
                       <span>{item.title}</span>
-                    </a>
+                    </Link>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
