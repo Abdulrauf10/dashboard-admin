@@ -11,7 +11,7 @@ A modern and responsive Admin Dashboard built with **React**, **Vite**, styled u
 
 ## 🔗 Demo
 
-👉 [View Live Demo](https://abdulrauf.tech)  
+👉 [View Live Demo](https://dashboard-admin-rosy-ten.vercel.app/)  
 
 ## 📁 Project Structure
 
