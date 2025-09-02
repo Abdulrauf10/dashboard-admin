@@ -8,10 +8,11 @@ A modern and responsive Admin Dashboard built with **React**, **Vite**, styled u
 - ⚡ **Vite** – Lightning-fast build tool
 - 🎨 **Tailwind CSS** – Styling
 - 🧱 **Radix UI** – Accessible and unstyled component primitives
+- ShadCn
 
 ## 🔗 Demo
 
-👉 [View Live Demo](https://dashboard-admin-rosy-ten.vercel.app/)  
+👉 [View Live Demo](https://dashboard-admin-tau-nine.vercel.app/)  
 
 ## 📁 Project Structure
 
